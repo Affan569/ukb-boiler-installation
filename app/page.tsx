@@ -1,69 +1,148 @@
-import Image from "next/image";
+import HeroSection from "./components/herosection";
+import AboutUs from "./components/Aboutus";
+import WhyChooseUs from "./components/whychooseus";
+import HowItWorks from "./components/howitworks";
+import TrustedBrands from "./components/trustedbrands";
+import Recentprojects from "./components/Recentprojects";
+import Testimonials from "./components/testimonial";
+import FAQ from "./components/faq";
+import CTASection from "./components/CTASection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs",
+  description: "Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services. Free quotes available.",
+  keywords: "boiler installation Southampton, boiler repair Southampton, Gas Safe registered engineers, combi boiler installation, emergency boiler repair, central heating Southampton, boiler replacement, boiler service, Worcester boiler, Vaillant boiler, Baxi boiler, heating engineers Southampton, new boiler cost, boiler servicing",
+  alternates: {
+    canonical: 'https://ukbboilerinstalls.co.uk',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://ukbboilerinstalls.co.uk',
+    title: 'Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs',
+    description: 'Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services.',
+    images: [
+      {
+        url: 'https://ukbboilerinstalls.co.uk/images/hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'Professional boiler installation in Southampton',
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="flex flex-col">
+      <HeroSection />
+      <AboutUs />
+      <WhyChooseUs />
+      <HowItWorks />
+      <TrustedBrands />
+      <Recentprojects />
+      <Testimonials />
+      <FAQ />
+      <CTASection />
+      
+      {/* Structured Data for Local Business */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "UKB Boiler Installs",
+            "description": "Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers with 24/7 emergency support.",
+            "url": "https://ukbboilerinstalls.co.uk",
+            "telephone": "+44 54326546",
+            "email": "info@ukbboilerinstalls.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Southampton",
+              "addressRegion": "Hampshire",
+              "addressCountry": "GB",
+              "postalCode": "SO1 1AA"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "50.9097",
+              "longitude": "-1.4044"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            "priceRange": "£££",
+            "areaServed": "Southampton",
+            "sameAs": [
+              "https://www.facebook.com/ukbboilerinstalls"
+            ]
+          })
+        }}
+      />
+      
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How long does a boiler installation take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most boiler replacements are completed in a single day. Larger jobs, such as moving the boiler or changing the pipework, can take a little longer. We confirm the timescale in your quote."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer free quotes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, we provide free, no-obligation quotes for all boiler installations. Our team will assess your needs, recommend the best options and give you a clear, upfront price with no hidden costs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are your engineers Gas Safe registered?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. All of our engineers are Gas Safe registered and fully insured, and they carry their ID card on every visit. You can check any engineer on the Gas Safe Register."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What brands of boilers do you install?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We install boilers from leading manufacturers and will recommend the right model for your home, heating needs and budget. Ask us which brands we can supply when you request your quote."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide warranty?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Every installation comes with the manufacturer's warranty on the boiler, plus a guarantee on our workmanship. The exact length depends on the model and is confirmed in your quote."
+                }
+              }
+            ]
+          })
+        }}
+      />
+    </main>
   );
 }

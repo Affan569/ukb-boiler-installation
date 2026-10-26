@@ -1,0 +1,6 @@
+# robots.txt for UKB Boiler Installs
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ukbboilerinstalls.co.uk/sitemap.xml
