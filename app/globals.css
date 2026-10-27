@@ -132,9 +132,7 @@ ul.bp-hero-features {
 .grid.grid-cols-2.gap-y-8.rounded-\[24px\].bg-\[\#f8fbff\].px-6.py-7.shadow-\[0_20px_60px_rgba\(10\,42\,107\,0\.12\)\].lg\:grid-cols-4.lg\:px-10 {
     padding: 20px;
 }
-.lg\:py-16 {
-    padding-block: calc(var(--spacing) * 8);
-}
+
 @media (max-width: 768px) {
   span.block.text-5xl.text-\[\#0a2a6b\].sm\:text-6xl.lg\:text-\[64px\] {
     font-size: 30px;
@@ -178,8 +176,21 @@ span.faq-navy {
 span.faq-navy {
     font-size: 30px;
 }
+.relative.mx-auto.max-w-\[1280px\].px-6.lg\:px-12 {
+    padding: 0px 20px;
+}
+.mx-auto.flex.max-w-\[1488px\].items-center.justify-between.px-6.transition-all.duration-300.lg\:px-12.h-\[88px\] {
+    padding: 0px 16px;
+}
+
 }
 section#contact-form {
     padding-top: 30px;
 }
 
+.lg\:py-16 {
+    padding-block: calc(var(--spacing) * 16);
+}
+.lg\:px-12 {
+    padding-inline: calc(var(--spacing) * 24);
+}

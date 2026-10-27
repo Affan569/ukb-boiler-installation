@@ -202,8 +202,36 @@ const RecentProjects: React.FC = () => {
 
   const visible = PROJECTS.filter((p) => active === "All Projects" || p.category === active);
 
-  const scrollBy = (dir: 1 | -1) =>
-    trackRef.current?.scrollBy({ left: dir * 520, behavior: "smooth" });
+  // One click = exactly one card forward / back
+  const scrollBy = (dir: 1 | -1) => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const cards = Array.from(track.querySelectorAll<HTMLElement>(".rp-card"));
+    if (!cards.length) return;
+
+    const padLeft = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+    const trackLeft = track.getBoundingClientRect().left;
+
+    // scrollLeft value at which each card sits exactly at the start edge
+    const targets = cards.map(
+      (c) => c.getBoundingClientRect().left - trackLeft + track.scrollLeft - padLeft
+    );
+
+    // find the card currently closest to the start edge
+    let current = 0;
+    let best = Infinity;
+    targets.forEach((t, i) => {
+      const diff = Math.abs(t - track.scrollLeft);
+      if (diff < best) {
+        best = diff;
+        current = i;
+      }
+    });
+
+    const next = Math.min(cards.length - 1, Math.max(0, current + dir));
+    track.scrollTo({ left: targets[next], behavior: "smooth" });
+  };
 
   return (
     <section ref={sectionRef} className="rp-section">
@@ -453,8 +481,11 @@ const CSS = `
   .rp-modal-body { padding: 20px; }
   .rp-facts { grid-template-columns: 1fr 1fr; }
   .rp-cols { grid-template-columns: 1fr; gap: 20px; }
+ 
 }
 @media (max-width: 768px) {
   .rp-title { font-size: 30px; }
 }
+
+
 `;

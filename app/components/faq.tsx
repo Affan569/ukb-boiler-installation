@@ -190,7 +190,7 @@ const CSS = `
   position:relative; overflow:hidden; isolation:isolate;
   background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);
   font-family:var(--font-geist-sans),system-ui,sans-serif;
-  padding:40px 0 40px;
+  padding:40px 0 0px;
 }
 .faq-inner{
   position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:0 32px;
@@ -250,7 +250,7 @@ const CSS = `
 
 /* ---------- responsive: same design, stacked ---------- */
 @media (max-width:900px){
-  .faq{padding:48px 0 64px}
+  .faq{padding:30px 0 30px}
   .faq-inner{grid-template-columns:1fr; gap:34px; padding:0 18px}
   .faq-eyebrow{padding-top:0}
   .faq-lead{max-width:none; font-size:15.5px}

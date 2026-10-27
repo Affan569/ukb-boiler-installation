@@ -41,7 +41,7 @@ export default function CTASection() {
 const css = `
 .cta-wrapper {
   background-color: #ffffff;
-  padding: 40px 16px;
+  padding: 30px 16px;
   width: 100%;
   display: flex;
   justify-content: center;

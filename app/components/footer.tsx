@@ -21,7 +21,7 @@ const css = `
 
 /* ---------- brand column ---------- */
 .ukbf-logo { min-height: 100px; display: flex; align-items: center; }
-.ukbf-logo img, .ukbf-logo svg { height: 100px; width: auto; max-width: 100%; object-fit: contain; display: block; }
+.ukbf-logo img, .ukbf-logo svg { max-height: 65px; height: 100px; width: auto; max-width: 100%; object-fit: contain; display: block; }
 .ukbf-bar { width: 48px; height: 4px; background: ${ORANGE}; border-radius: 2px; }
 .ukbf-brand .ukbf-bar { margin: 18px 0 20px; }
 .ukbf-tagline { margin: 0 0 18px; font-size: 26px; line-height: 1.2; font-weight: 700; letter-spacing: -0.3px; }

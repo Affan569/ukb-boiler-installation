@@ -114,31 +114,25 @@ const heroStyles = `
   }
     
 @media (max-width: 900px) {
-.features-card.grid.grid-cols-2.gap-y-8.px-6.py-7.lg\:grid-cols-4.lg\:px-10 {
+.features-card.grid.grid-cols-2.gap-y-8.px-6.py-7.lg\\:grid-cols-4.lg\\:px-10 {
     border: 1px;
     gap: 4px;
     padding: 6px;
 }
-h3.mt-3.text-base.font-bold.text-\[\#0a2a6b\] {
+h3.mt-3.text-base.font-bold.text-\\[\\#0a2a6b\\] {
     font-size: 13px;
     margin-top: 4px;
 }
-p.mt-1.text-sm.text-\[\#1f2f55\] {
+p.mt-1.text-sm.text-\\[\\#1f2f55\\] {
     font-size: 12px;
 }
-    .features-card.grid.grid-cols-2.gap-y-8.px-6.py-7.lg\:grid-cols-4.lg\:px-10 {
+    .features-card.grid.grid-cols-2.gap-y-8.px-6.py-7.lg\\:grid-cols-4.lg\\:px-10 {
     padding: 10px;
 }
     .pb-16 {
     padding-bottom: calc(var(--spacing) * 6);
 }
-    span.block.text-5xl.text-\[\#0b7cf0\].sm\:text-6xl.lg\:text-\[40px\] {
-    font-size: 36px;
-}
-    span.block.text-5xl.text-\[\#0a2a6b\].sm\:text-6xl.lg\:text-\[40px\] {
-    font-size: 36px;
-}
-    h2.scroll-animate.text-2xl.font-light.uppercase.tracking-\[0\.18em\].text-\[\#0a2a6b\].sm\:text-3xl.lg\:text-\[24px\].is-visible {
+    h2.scroll-animate.text-2xl.font-light.uppercase.tracking-\\[0\\.18em\\].text-\\[\\#0a2a6b\\].sm\\:text-3xl.lg\\:text-\\[24px\\].is-visible {
     font-size: 18px;
 }
 }
@@ -167,20 +161,20 @@ export default function HeroSection() {
         {/* Dark overlay */}
         <div className="hero-gradient" />
         <div ref={heroRef} className="hero-content relative mx-auto flex h-full max-w-[1280px] flex-col justify-start px-6 pb-32 pt-[calc(123px+3rem)] lg:px-16 lg:pt-[calc(123px+2.5rem)]">
-          <h2 className={`scroll-animate text-2xl font-bold uppercase tracking-[0.18em] text-[#0a2a6b] sm:text-3xl lg:text-[28px] ${heroVisible ? 'is-visible' : ''}`}>
+          <h2 className={`scroll-animate text-2xl font-bold uppercase tracking-[0.18em] text-[#ffffff] sm:text-3xl lg:text-[28px] ${heroVisible ? 'is-visible' : ''}`}>
             Professional
           </h2>
           <h1 className={`scroll-animate-delay-1 mt-1 font-black uppercase leading-[0.95] tracking-tight ${heroVisible ? 'is-visible' : ''}`}>
-            <span className="block text-5xl text-[#0a2a6b] sm:text-6xl lg:text-[52px]">Boiler</span>
-            <span className="block text-5xl text-[#FF7A1A] sm:text-6xl lg:text-[52px]">Installation</span>
+            <span className="block text-[36px] text-[#ffffff]">Boiler</span>
+            <span className="block text-[36px] text-[#FF7A1A]">Installation</span>
           </h1>
 
-          <p className={`scroll-animate-delay-2 mt-2 text-lg font-medium text-[#0a2a6b] sm:text-[22px] ${heroVisible ? 'is-visible' : ''}`}>
+          <p className={`scroll-animate-delay-2 mt-2 text-lg font-medium text-[#ffffff] sm:text-[22px] ${heroVisible ? 'is-visible' : ''}`}>
             Safe. Efficient. Reliable.
           </p>
 
           <div className={`scroll-animate-delay-3 mt-4 h-[4px] w-[120px] rounded-full bg-gradient-to-r from-[#f97316] to-[#fb923c] ${heroVisible ? 'is-visible' : ''}`} />
-          <p className={`scroll-animate-delay-4 mt-5 max-w-[440px] text-sm leading-6 text-[#1f2f55] sm:text-base ${heroVisible ? 'is-visible' : ''}`}>
+          <p className={`scroll-animate-delay-4 mt-5 max-w-[440px] text-sm leading-6 text-[#ffffff] sm:text-base ${heroVisible ? 'is-visible' : ''}`}>
             Expert boiler installation, replacement and servicing for a warmer, more comfortable home.
           </p>
 
@@ -197,12 +191,12 @@ export default function HeroSection() {
             </button>
 
             <a href="tel:+44312092405" className="flex items-center gap-3">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="#0b7cf0">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#09296A">
                 <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2Z" />
               </svg>
               <span className="leading-tight">
-                <span className="block text-xs text-[#1f2f55]">Call Us Today</span>
-                <span className="block text-lg font-bold text-[#0a2a6b]">07988530358</span>
+                <span className="block text-xs text-[#ffffff]">Call Us Today</span>
+                <span className="block text-lg font-bold text-[#ffffff]">07988530358</span>
               </span>
             </a>
           </div>
