@@ -339,14 +339,7 @@ const css = `
   align-items: center;
   gap: 6px;
 }
-.bp-featured-body {
-  padding: 34px 38px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 14px;
-}
+
 .bp-featured-label {
   display: inline-flex;
   align-items: center;
@@ -361,19 +354,7 @@ const css = `
   border-radius: 50%;
   background: var(--orange);
 }
-.bp-featured-body h2 {
-  font-size: clamp(22px, 2.4vw, 30px);
-  line-height: 1.22;
-  font-weight: 800;
-  color: var(--navy);
-  letter-spacing: -0.01em;
-}
-.bp-featured-body > p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: var(--muted);
-  max-width: 480px;
-}
+
 .bp-byline {
   display: flex;
   flex-wrap: wrap;
@@ -1169,51 +1150,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* FEATURED POST */}
-      {featuredPost && (
-        <div className="bp-container bp-featured-wrap">
-          <article className="bp-featured">
-            <div className="bp-featured-media">
-              <img src={featuredPost.image} alt={featuredPost.title} />
-              <div className="bp-img-fallback" />
-              <span className="bp-badge">FEATURED</span>
-              <div className="bp-featured-caption">
-                <span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
-                  {featuredPost.readTime} min read
-                </span>
-                <span className="bp-sep">•</span>
-                <span>{formatDate(featuredPost.date)}</span>
-              </div>
-            </div>
-            <div className="bp-featured-body">
-              <div className="bp-featured-label">
-                <span className="bp-dot" />
-                {featuredPost.category}
-              </div>
-              <h2>{featuredPost.title}</h2>
-              <p>{featuredPost.excerpt}</p>
-              <div className="bp-byline">
-                <span>By {featuredPost.author.name}</span>
-                <span className="bp-sep">•</span>
-                <span>{formatDate(featuredPost.date)}</span>
-              </div>
-              <button
-                className="bp-btn bp-btn-primary"
-                onClick={() => setSelectedPost(featuredPost)}
-              >
-                Read Article
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </article>
-        </div>
-      )}
 
       {/* MAIN CONTENT */}
       <div className="bp-container bp-main">

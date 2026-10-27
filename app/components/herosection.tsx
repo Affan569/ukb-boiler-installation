@@ -71,7 +71,7 @@ export default function HeroSection() {
           className="object-cover object-[72%_center] lg:object-[center_40%]"
         />
         {/* Gradient overlay with light opacity */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 via-blue-800/40 to-transparent" />
         <div ref={heroRef} className="relative mx-auto flex h-full max-w-[1280px] flex-col justify-start px-6 pb-32 pt-[calc(123px+3rem)] lg:px-16 lg:pt-[calc(123px+2.5rem)]">
           <h2 className={`scroll-animate text-2xl font-light uppercase tracking-[0.18em] text-[#0a2a6b] sm:text-3xl lg:text-[24px] ${heroVisible ? 'is-visible' : ''}`}>
             Professional

@@ -1,0 +1,17 @@
+{
+  "name": "UKB Boiler Installs Southampton",
+  "short_name": "UKB Boiler",
+  "description": "Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b7cf0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

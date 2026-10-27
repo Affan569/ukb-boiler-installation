@@ -53,7 +53,7 @@ export const blogs: BlogPost[] = [
       "Discover the key factors to consider when selecting a boiler, from efficiency ratings to the right size for your home. Make a confident choice and enjoy reliable heating for years to come.",
     category: "Boiler Installation",
     tag: "HEATING SYSTEMS",
-    image: "/images/111.jpg",
+    image: "/images/11.jpg",
     author: { name: "Daniel Carter", avatar: "/images/11.jpg" },
     date: "2025-04-28",
     readTime: 8,

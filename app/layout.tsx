@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs",
+  title: {
+    default: "Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs",
+    template: "%s | UKB Boiler Installs Southampton",
+  },
   description: "Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services. Get a free quote today.",
   keywords: "boiler installation Southampton, boiler repair Southampton, Gas Safe registered engineers, combi boiler installation, emergency boiler repair, central heating Southampton, boiler replacement, boiler service, Worcester boiler, Vaillant boiler, Baxi boiler, heating engineers Southampton, new boiler cost, boiler servicing",
   authors: [{ name: "UKB Boiler Installs" }],
@@ -37,11 +40,20 @@ export const metadata: Metadata = {
     title: 'Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs',
     description: 'Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services.',
     siteName: 'UKB Boiler Installs',
+    images: [
+      {
+        url: '/images/hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'Professional boiler installation in Southampton',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs',
     description: 'Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services.',
+    images: ['/images/hero.png'],
   },
   robots: {
     index: true,
@@ -54,14 +66,22 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="en-GB"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Header />
         {children}

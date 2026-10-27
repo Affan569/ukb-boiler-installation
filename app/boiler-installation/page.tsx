@@ -10,9 +10,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
+    locale: 'en_GB',
     url: 'https://ukbboilerinstalls.co.uk/boiler-installation',
     title: 'Boiler Installation & Repair Services Southampton | Combi Boiler Replacement',
     description: 'Expert boiler installation and repair services in Southampton. Professional combi boiler replacement, system boiler installation, and emergency boiler repair by Gas Safe registered engineers.',
+    images: [
+      {
+        url: '/images/hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'Boiler installation services in Southampton',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Boiler Installation & Repair Services Southampton | Combi Boiler Replacement',
+    description: 'Expert boiler installation and repair services in Southampton. Professional combi boiler replacement, system boiler installation, and emergency boiler repair by Gas Safe registered engineers.',
+    images: ['/images/hero.png'],
   },
 };
 
