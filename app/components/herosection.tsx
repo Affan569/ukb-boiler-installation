@@ -202,7 +202,7 @@ export default function HeroSection() {
               </svg>
               <span className="leading-tight">
                 <span className="block text-xs text-[#1f2f55]">Call Us Today</span>
-                <span className="block text-lg font-bold text-[#0a2a6b]">+44 54326546</span>
+                <span className="block text-lg font-bold text-[#0a2a6b]">07988530358</span>
               </span>
             </a>
           </div>

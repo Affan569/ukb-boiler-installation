@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ukbboilerinstalls.co.uk/sitemap.xml
+Sitemap: https://ukbboilerinstallation.co.uk/sitemap.xml

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ukbboilerinstalls.co.uk/sitemap.xml',
+    sitemap: 'https://ukbboilerinstallation.co.uk/sitemap.xml',
   };
 }

@@ -229,8 +229,8 @@ export interface UKBFooterProps {
 export default function UKBFooter({
   logoSrc = "/images/logo1.png",
   logo,
-  phone = "020 8123 4567",
-  email = "info@ukbboilerinstalls.co.uk",
+  phone = "07988530358",
+  email = "info@ukbboilerinstallation.co.uk",
   onSubscribe,
   className,
 }: UKBFooterProps) {

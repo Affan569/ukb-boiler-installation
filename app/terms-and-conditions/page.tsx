@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Terms and Conditions | UKB Boiler Installs Southampton",
   description: "Read our terms and conditions for boiler installation and repair services in Southampton. Understand our service agreement, warranty terms, and customer responsibilities.",
   alternates: {
-    canonical: 'https://ukbboilerinstalls.co.uk/terms-and-conditions',
+    canonical: 'https://ukbboilerinstallation.co.uk/terms-and-conditions',
   },
 };
 
@@ -117,7 +117,7 @@ export default function TermsAndConditions() {
             For any questions about these terms, please contact us:
           </p>
           <p>
-            <strong>Email:</strong> info@ukbboilerinstalls.co.uk<br />
+            <strong>Email:</strong> info@ukbboilerinstallation.co.uk<br />
             <strong>Phone:</strong> +92 314 2078089<br />
             <strong>Address:</strong> Southampton, United Kingdom
           </p>

@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description: "Professional boiler servicing and annual maintenance in Southampton. Gas Safe registered engineers provide thorough boiler checks, safety inspections, and efficiency optimization. Extend your boiler's life with regular servicing.",
   keywords: "boiler servicing Southampton, annual boiler service, boiler maintenance, boiler safety check, gas boiler service, central heating service, boiler inspection, boiler tune-up, Southampton heating maintenance",
   alternates: {
-    canonical: 'https://ukbboilerinstalls.co.uk/boiler-servicing',
+    canonical: 'https://ukbboilerinstallation.co.uk/boiler-servicing',
   },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ukbboilerinstalls.co.uk/boiler-servicing',
+    url: 'https://ukbboilerinstallation.co.uk/boiler-servicing',
     title: 'Boiler Servicing Southampton | Annual Boiler Maintenance | UKB Boiler Installs',
     description: 'Professional boiler servicing and annual maintenance in Southampton. Gas Safe registered engineers provide thorough boiler checks, safety inspections, and efficiency optimization.',
     images: [

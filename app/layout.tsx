@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ukbboilerinstalls.co.uk'),
+  metadataBase: new URL('https://ukbboilerinstallation.co.uk'),
   alternates: {
-    canonical: 'https://ukbboilerinstalls.co.uk',
+    canonical: 'https://ukbboilerinstallation.co.uk',
   },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ukbboilerinstalls.co.uk',
+    url: 'https://ukbboilerinstallation.co.uk',
     title: 'Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs',
     description: 'Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services.',
     siteName: 'UKB Boiler Installs',

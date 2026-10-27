@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | UKB Boiler Installs Southampton",
   description: "Read our privacy policy to understand how UKB Boiler Installs collects, uses, and protects your personal information when you use our boiler installation services in Southampton.",
   alternates: {
-    canonical: 'https://ukbboilerinstalls.co.uk/privacy-policy',
+    canonical: 'https://ukbboilerinstallation.co.uk/privacy-policy',
   },
 };
 
@@ -70,8 +70,8 @@ export default function PrivacyPolicy() {
             If you have any questions about this Privacy Policy or our data practices, please contact us at:
           </p>
           <p>
-            <strong>Email:</strong> info@ukbboilerinstalls.co.uk<br />
-            <strong>Phone:</strong> +44 54326546
+            <strong>Email:</strong> info@ukbboilerinstallation.co.uk<br />
+            <strong>Phone:</strong> 07988530358
           </p>
 
           <h2 className="text-2xl font-bold text-[#0a2a6b] mt-8 mb-4">8. Changes to This Policy</h2>

@@ -55,7 +55,7 @@ export default function Home() {
             "name": "UKB Boiler Installs",
             "description": "Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers with 24/7 emergency support.",
             "url": "https://ukbboilerinstalls.co.uk",
-            "telephone": "+44 54326546",
+            "telephone": "07988530358",
             "email": "info@ukbboilerinstalls.co.uk",
             "address": {
               "@type": "PostalAddress",

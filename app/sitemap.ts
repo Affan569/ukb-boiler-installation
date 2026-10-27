@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ukbboilerinstalls.co.uk';
+  const baseUrl = 'https://ukbboilerinstallation.co.uk';
 
   return [
     {

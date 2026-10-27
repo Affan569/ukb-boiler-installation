@@ -210,7 +210,7 @@ export default function BoilerServicingContent() {
                 className="inline-flex items-center justify-center gap-3 bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors"
               >
                 <Icon d={ICONS.phone} />
-                +44 54326546
+                07988530358
               </a>
             </div>
           </div>
@@ -402,7 +402,7 @@ export default function BoilerServicingContent() {
                 className="inline-flex items-center justify-center gap-2 border border-white/60 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-white/10 transition-colors"
               >
                 <Icon d={ICONS.phone} size={16} />
-                Call Us +44 54326546
+                Call Us 07988530358
               </a>
             </div>
           </div>

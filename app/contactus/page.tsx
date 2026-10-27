@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description: "Contact UKB Boiler Installs in Southampton for professional boiler installation and repair services. Get a free quote from our Gas Safe registered engineers. 24/7 emergency support available.",
   keywords: "contact boiler installation Southampton, boiler quote Southampton, heating engineer contact, emergency boiler repair contact, free boiler quote, boiler installation inquiry, Southampton heating services contact",
   alternates: {
-    canonical: 'https://ukbboilerinstalls.co.uk/contactus',
+    canonical: 'https://ukbboilerinstallation.co.uk/contactus',
   },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ukbboilerinstalls.co.uk/contactus',
+    url: 'https://ukbboilerinstallation.co.uk/contactus',
     title: 'Contact Us | Boiler Installation Southampton | Get a Free Quote | UKB Boiler Installs',
     description: 'Contact UKB Boiler Installs in Southampton for professional boiler installation and repair services. Get a free quote from our Gas Safe registered engineers. 24/7 emergency support available.',
     images: [

@@ -230,7 +230,7 @@ export default function BoilerRepairContent() {
                 className="inline-flex items-center justify-center gap-3 bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors"
               >
                 <Icon d={ICONS.phone} size={20} />
-                +44 54326546
+                07988530358
               </a>
             </div>
           </div>
@@ -460,7 +460,7 @@ export default function BoilerRepairContent() {
                   className="inline-flex items-center justify-center gap-3 bg-white text-[#0b7cf0] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors"
                 >
                   <Icon d={ICONS.phone} size={20} />
-                  Call Now: +44 54326546
+                  Call Now: 07988530358
                 </a>
                 <button
                   onClick={() => setQuote(true)}

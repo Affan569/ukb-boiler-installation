@@ -9,9 +9,9 @@ type Status = "idle" | "sending" | "success" | "error";
 /* Business details (edit here)                                        */
 /* ------------------------------------------------------------------ */
 
-const PHONE_DISPLAY = "+44 54326546";
-const PHONE_HREF = "tel:+4454326546";
-const EMAIL = "info@ukbboilerinstalls.co.uk";
+const PHONE_DISPLAY = "07988530358";
+const PHONE_HREF = "tel:07988530358";
+const EMAIL = "info@ukbboilerinstallation.co.uk";
 const ADDRESS_LINES = ["Southampton, Hampshire", "SO1 1AA, United Kingdom"];
 const MAP_QUERY = "Southampton, Hampshire, SO1 1AA, United Kingdom";
 const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&output=embed`;
