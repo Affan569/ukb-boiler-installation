@@ -367,7 +367,6 @@ const css = `
   opacity: 0.5;
 }
 
-/* ====================== MAIN LAYOUT ====================== */
 .bp-main {
   margin-top: 34px;
   display: grid;
