@@ -6,7 +6,7 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 const styles = `
   .br-hero {
     position: relative;
-    background: linear-gradient(135deg, #1a1a2e 0%, #0b7cf0 100%);
+    background: #1a1a2e;
     min-height: 500px;
     display: flex;
     align-items: center;
@@ -18,6 +18,13 @@ const styles = `
     inset: 0;
     background: url('/images/hero.png') center/cover;
     opacity: 0.15;
+  }
+  .br-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
   }
   .br-hero-content { position: relative; z-index: 10; }
 
@@ -92,7 +99,7 @@ const styles = `
 
   .br-cta {
     background: linear-gradient(135deg, #0b7cf0 0%, #3b9bff 100%);
-    border-radius: 24px; padding: 60px 40px; color: #fff;
+    border-radius: 24px; padding: 30px 20px; color: #fff;
   }
 
   @media (max-width: 768px) {
@@ -202,13 +209,10 @@ export default function BoilerRepairContent() {
       <section ref={heroRef} className="br-hero">
         <div className="br-hero-content mx-auto max-w-7xl px-6 py-[30px]">
           <div className={`scroll-animate ${heroVisible ? "is-visible" : ""}`}>
-            <div className="br-badge mb-6">
-              <Icon d={ICONS.alert} size={20} />
-              24/7 Emergency Service
-            </div>
-            <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+            
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
               Boiler Breakdown?<br />
-              <span className="text-[#ffb84d]">We&apos;ll Fix It Fast</span>
+              <span className="text-[#FF7A1A]">We&apos;ll Fix It Fast</span>
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mb-8">
               Emergency boiler repair in Southampton. Gas Safe engineers available 24/7 to get your heating back on quickly and safely.

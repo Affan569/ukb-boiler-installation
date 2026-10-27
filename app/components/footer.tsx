@@ -17,7 +17,7 @@ const css = `
 .ukbf a:focus-visible, .ukbf button:focus-visible, .ukbf input:focus-visible { outline: 3px solid ${BLUE_BRIGHT}; outline-offset: 3px; }
 
 .ukbf-inner { max-width: 1426px; margin: 0 auto; padding: 36px 36px 0; }
-.ukbf-grid { display: grid; grid-template-columns: 1.25fr 0.8fr 1fr 1fr 0.8fr; align-items: start; padding-bottom: 20px; gap: 40px; }
+.ukbf-grid { display: grid; grid-template-columns: 1.25fr 0.8fr 1fr 1fr; align-items: start; padding-bottom: 20px; gap: 40px; }
 
 /* ---------- brand column ---------- */
 .ukbf-logo { min-height: 100px; display: flex; align-items: center; }
@@ -54,8 +54,10 @@ const css = `
 .ukbf-card {
   position: relative; overflow: hidden;
   background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.015)), ${BLUE_DEEP};
-  border: 1px solid rgba(248,104,29,.45); border-radius: 26px; padding: 40px 24px 30px;
+  border: 1px solid rgba(248,104,29,.45); border-radius: 26px; padding: 20px 14px 20px;
   box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  min-width: 300px;
+  width: 100%;
 }
 .ukbf-card::after {
   content: ""; position: absolute; top: -1px; right: -1px; width: 96px; height: 96px;
@@ -203,7 +205,7 @@ const QUICK_LINKS = [
   { label: "Home", href: "/" },
   { label: "Boiler Installation", href: "/boiler-installation" },
   { label: "Boiler Servicing", href: "/boiler-servicing" },
-  { label: "Boiler Repairs", href: "/boiler-repairs" },
+  { label: "Boiler Repair", href: "/boiler-repair" },
   { label: "Our Work", href: "/our-work" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },
@@ -371,7 +373,7 @@ export default function UKBFooter({
     <div className="ukbf-copy">
       <span>© {year} UKB Boiler Installs. All rights reserved.</span>
     
-      <span className="vline" aria-hidden="true" />
+      <span className="vline" aria-hidden="true" style={{marginLeft: '20px'}} />
         <span>
         Created by{' '}
         <a 
@@ -379,28 +381,22 @@ export default function UKBFooter({
           target="_blank" 
           rel="noopener noreferrer"
         >
-          TA Creative
+          TACreatives
         </a>
       </span>
     </div>
 
 
-          <div className="ukbf-legal">
+          
+
+          <div className="ukbf-follow">
+            <div className="ukbf-legal">
             <a href="/privacy-policy">Privacy Policy</a>
             <span className="sep" aria-hidden />
             <a href="/cookie-policy">Cookie Policy</a>
             <span className="sep" aria-hidden />
             <a href="/terms-and-conditions">Terms &amp; Conditions</a>
           </div>
-
-          <div className="ukbf-follow">
-            <span>Follow Us</span>
-            <div className="icons">
-              <a className="ukbf-soc" href="#" aria-label="Facebook"><Facebook /></a>
-              <a className="ukbf-soc" href="#" aria-label="Instagram"><Instagram /></a>
-              <a className="ukbf-soc" href="#" aria-label="LinkedIn"><LinkedIn /></a>
-              <a className="ukbf-soc" href="#" aria-label="YouTube"><YouTube /></a>
-            </div>
           </div>
         </div>
       </div>

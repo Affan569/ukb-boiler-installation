@@ -66,7 +66,7 @@ const heroStyles = `
   .hero-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(11, 124, 240, 0.6), rgba(11, 124, 240, 0.4), transparent);
+    background: rgba(0, 0, 0, 0.45);
     pointer-events: none;
   }
 
@@ -164,15 +164,15 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover object-[72%_center] lg:object-[center_40%]"
         />
-        {/* Gradient overlay with light opacity */}
+        {/* Dark overlay */}
         <div className="hero-gradient" />
         <div ref={heroRef} className="hero-content relative mx-auto flex h-full max-w-[1280px] flex-col justify-start px-6 pb-32 pt-[calc(123px+3rem)] lg:px-16 lg:pt-[calc(123px+2.5rem)]">
-          <h2 className={`scroll-animate text-2xl font-light uppercase tracking-[0.18em] text-[#0a2a6b] sm:text-3xl lg:text-[24px] ${heroVisible ? 'is-visible' : ''}`}>
+          <h2 className={`scroll-animate text-2xl font-bold uppercase tracking-[0.18em] text-[#0a2a6b] sm:text-3xl lg:text-[28px] ${heroVisible ? 'is-visible' : ''}`}>
             Professional
           </h2>
           <h1 className={`scroll-animate-delay-1 mt-1 font-black uppercase leading-[0.95] tracking-tight ${heroVisible ? 'is-visible' : ''}`}>
-            <span className="block text-5xl text-[#0a2a6b] sm:text-6xl lg:text-[40px]">Boiler</span>
-            <span className="block text-5xl text-[#0b7cf0] sm:text-6xl lg:text-[40px]">Installation</span>
+            <span className="block text-5xl text-[#0a2a6b] sm:text-6xl lg:text-[52px]">Boiler</span>
+            <span className="block text-5xl text-[#FF7A1A] sm:text-6xl lg:text-[52px]">Installation</span>
           </h1>
 
           <p className={`scroll-animate-delay-2 mt-2 text-lg font-medium text-[#0a2a6b] sm:text-[22px] ${heroVisible ? 'is-visible' : ''}`}>

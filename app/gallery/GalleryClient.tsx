@@ -436,15 +436,13 @@ const css = `
 /* hero */
 .ukbg-hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(460px,70vh,640px);overflow:hidden;background:var(--navy);color:#fff}
 .ukbg-hero-bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center}
-.ukbg-hero-overlay{position:absolute;inset:0;z-index:-1;background:
-  linear-gradient(90deg,rgba(6,22,52,.92) 0%,rgba(6,22,52,.72) 42%,rgba(6,22,52,.28) 75%,rgba(6,22,52,.12) 100%),
-  linear-gradient(0deg,rgba(6,22,52,.55) 0%,rgba(6,22,52,0) 35%)}
+.ukbg-hero-overlay{position:absolute;inset:0;z-index:-1;background:rgba(0,0,0,.45)}
 .ukbg-hero-inner{width:100%;max-width:1280px;margin:0 auto;padding:80px clamp(16px,4vw,48px)}
 .ukbg-eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font-size:.78rem;font-weight:600;color:var(--muted)}
 .ukbg-eyebrow::before{content:"";width:22px;height:2px;background:#ff8a1f;border-radius:2px}
 .ukbg-hero .ukbg-eyebrow{color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.14em;font-size:.75rem}
-.ukbg-hero h1{margin:0 0 18px;font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1.04;font-weight:800;color:#fff;letter-spacing:-.025em}
-.ukbg-hero h1 span{color:#6aa5ff}
+.ukbg-hero h1{margin:0 0 18px;font-size:clamp(2.4rem,5.5vw,4.8rem);line-height:1.04;font-weight:900;color:#fff;letter-spacing:-.025em}
+.ukbg-hero h1 span{color:#FF7A1A}
 .ukbg-hero-copy{max-width:50ch;margin:0 0 28px;color:rgba(255,255,255,.82);font-size:1.02rem;line-height:1.7}
 .ukbg-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
 .ukbg-hero .ukbg-btn{padding:14px 28px}
@@ -537,7 +535,7 @@ const css = `
 }
 @media (max-width:760px){
   .ukbg-hero{min-height:520px;align-items:flex-end}
-  .ukbg-hero-overlay{background:linear-gradient(0deg,rgba(6,22,52,.94) 0%,rgba(6,22,52,.75) 55%,rgba(6,22,52,.35) 100%)}
+  .ukbg-hero-overlay{background:rgba(0,0,0,.45)}
   .ukbg-hero-inner{padding:56px 16px 36px}
   .ukbg-hero-actions .ukbg-btn{flex:1}
   .ukbg-stats li{flex:1 1 100%}

@@ -528,13 +528,14 @@ const css = `
 /* hero */
 .uc-hero{position:relative;isolation:isolate;padding-top:88px;background:var(--navy);overflow:hidden}
 .uc-hero-img{position:absolute;inset:0;object-fit:cover;opacity:.35;z-index:0}
-.uc-hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:clamp(24px,5vw,48px);padding:clamp(32px,6vw,64px) clamp(16px,4vw,32px);max-width:1200px;margin:0 auto}
+.uc-hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45);pointer-events:none;z-index:1}
+.uc-hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:clamp(24px,5vw,48px);padding:clamp(32px,6vw,64px) clamp(16px,4vw,32px);max-width:1200px;margin:0 auto}
 @media(min-width:900px){
   .uc-hero-inner{grid-template-columns:1.1fr .9fr;align-items:center}
 }
 .uc-hero-text{color:#fff}
-.uc-hero-text h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;line-height:1.1;margin:0 0 20px;letter-spacing:-.02em}
-.uc-hero-text h1 span{color:var(--orange)}
+.uc-hero-text h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:900;line-height:1.1;margin:0 0 20px;letter-spacing:-.02em}
+.uc-hero-text h1 span{color:#FF7A1A}
 .uc-hero-copy{font-size:1.05rem;line-height:1.6;margin:0 0 28px;color:rgba(255,255,255,.9);max-width:500px}
 .uc-perks{display:flex;flex-wrap:wrap;gap:20px 28px;margin:0;padding:0;list-style:none}
 .uc-perks li{display:flex;align-items:center;gap:12px}

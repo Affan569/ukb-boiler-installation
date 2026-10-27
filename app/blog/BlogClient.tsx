@@ -126,7 +126,7 @@ const css = `
   position: relative;
   color: #fff;
   overflow: hidden;
-  background: linear-gradient(120deg, #1a3f8f 0%, #2a5cc4 60%, #3b78e0 100%);
+  background: #1a3f8f;
   border-radius: 0 0 28px 28px;
 }
 .bp-hero-bg {
@@ -139,7 +139,7 @@ const css = `
 .bp-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(22, 56, 130, 0.49) 0%, rgba(30, 71, 160, 0.47) 35%, rgba(40, 90, 190, 0) 90%);
+  background: rgba(0, 0, 0, 0.45);
 }
 .bp-hero-inner {
   position: relative;
@@ -161,16 +161,13 @@ const css = `
   margin-bottom: 14px;
 }
 .bp-hero h1 {
-  font-size: clamp(32px, 4.2vw, 50px);
+  font-size: clamp(32px, 4.2vw, 56px);
   line-height: 1.12;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: -0.02em;
 }
 .bp-accent {
-  background: linear-gradient(90deg, var(--orange), var(--orange-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #FF7A1A;
 }
 .bp-hero-copy > p {
   margin-top: 16px;

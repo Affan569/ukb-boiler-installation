@@ -104,7 +104,7 @@ export default function Header() {
           <nav className="hidden items-center gap-7 xl:gap-9 lg:flex">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href ||
-                             (link.href !== "/" && pathname.startsWith(link.href)) ||
+                             (link.href && link.href !== "/" && pathname.startsWith(link.href)) ||
                              (link.href === "/#about" && pathname === "/" && typeof window !== 'undefined' && window.location.hash === '#about');
 
               if (link.dropdown) {
@@ -118,8 +118,8 @@ export default function Header() {
                     <button
                       className={`relative py-1.5 text-[13.5px] font-semibold transition-colors flex items-center gap-1 ${
                         pathname.startsWith('/boiler-')
-                          ? "text-[#0b7cf0] after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#0b7cf0]"
-                          : "text-[#0a2a6b] hover:text-[#0b7cf0]"
+                          ? "text-[#0a2a6b] after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#0a2a6b]"
+                          : "text-[#0b7cf0] hover:text-[#0a2a6b]"
                       }`}
                     >
                       {link.label}
@@ -137,8 +137,8 @@ export default function Header() {
                               href={dropdownLink.href}
                               className={`block px-4 py-2.5 text-sm font-semibold transition-colors ${
                                 isDropdownActive
-                                  ? "text-[#0b7cf0] bg-blue-50"
-                                  : "text-[#0a2a6b] hover:text-[#0b7cf0] hover:bg-gray-50"
+                                  ? "text-[#0a2a6b] bg-blue-50"
+                                  : "text-[#0b7cf0] hover:text-[#0a2a6b] hover:bg-gray-50"
                               }`}
                             >
                               {dropdownLink.label}
@@ -157,8 +157,8 @@ export default function Header() {
                   href={link.href}
                   className={`relative py-1.5 text-[13.5px] font-semibold transition-colors ${
                     isActive
-                      ? "text-[#0b7cf0] after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#0b7cf0]"
-                      : "text-[#0a2a6b] hover:text-[#0b7cf0]"
+                      ? "text-[#0a2a6b] after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#0a2a6b]"
+                      : "text-[#0b7cf0] hover:text-[#0a2a6b]"
                   }`}
                 >
                   {link.label}
@@ -182,7 +182,7 @@ export default function Header() {
           {/* MOBILE TOGGLE */}
           <button
             onClick={() => setMenuOpen((o) => !o)}
-            className="lg:hidden text-[#0a2a6b]"
+            className="lg:hidden text-[#0b7cf0]"
             aria-label="Toggle menu"
           >
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -197,7 +197,7 @@ export default function Header() {
             <nav className="flex flex-col">
               {NAV_LINKS.map((link) => {
                 const isActive = pathname === link.href ||
-                               (link.href !== "/" && pathname.startsWith(link.href)) ||
+                               (link.href && link.href !== "/" && pathname.startsWith(link.href)) ||
                                (link.href === "/#about" && pathname === "/" && typeof window !== 'undefined' && window.location.hash === '#about');
 
                 if (link.dropdown) {
@@ -206,7 +206,7 @@ export default function Header() {
                       <button
                         onClick={() => setServicesDropdown(!servicesDropdown)}
                         className={`w-full py-3 font-semibold transition-colors flex items-center justify-between ${
-                          pathname.startsWith('/boiler-') ? "text-[#0b7cf0]" : "text-[#0a2a6b]"
+                          pathname.startsWith('/boiler-') ? "text-[#0a2a6b]" : "text-[#0b7cf0]"
                         }`}
                       >
                         {link.label}
@@ -227,7 +227,7 @@ export default function Header() {
                                   setServicesDropdown(false);
                                 }}
                                 className={`block py-2 text-sm font-semibold transition-colors ${
-                                  isDropdownActive ? "text-[#0b7cf0]" : "text-[#0a2a6b]"
+                                  isDropdownActive ? "text-[#0a2a6b]" : "text-[#0b7cf0]"
                                 }`}
                               >
                                 {dropdownLink.label}
@@ -246,7 +246,7 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className={`border-b border-gray-100 py-3 font-semibold transition-colors ${
-                      isActive ? "text-[#0b7cf0]" : "text-[#0a2a6b]"
+                      isActive ? "text-[#0a2a6b]" : "text-[#0b7cf0]"
                     }`}
                   >
                     {link.label}
