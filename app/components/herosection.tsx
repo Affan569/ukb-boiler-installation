@@ -52,13 +52,75 @@ const FEATURES = [
   },
 ];
 
+const heroStyles = `
+  .hero-section {
+    position: relative;
+    background: white;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(11, 124, 240, 0.6), rgba(11, 124, 240, 0.4), transparent);
+    pointer-events: none;
+  }
+
+  .hero-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-cta-button {
+    background: #0a2a6b;
+    color: white;
+    transition: background 0.3s ease;
+  }
+
+  .hero-cta-button:hover {
+    background: #0b7cf0;
+  }
+
+  .features-card {
+    background: #f8fbff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(10, 42, 107, 0.12);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-section {
+      min-height: 450px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-section {
+      height: 650px;
+    }
+  }
+`;
+
 export default function HeroSection() {
   const [quote, setQuote] = useState(false);
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { elementRef: featuresRef, isVisible: featuresVisible } = useScrollAnimation();
 
   return (
-    <section className="relative bg-white">
+    <>
+      <style>{heroStyles}</style>
+      <section className="hero-section">
       {/* Background image + hero content */}
       <div className="relative min-h-[450px] w-full overflow-hidden lg:h-[650px] lg:min-h-0">
         <Image
@@ -71,8 +133,8 @@ export default function HeroSection() {
           className="object-cover object-[72%_center] lg:object-[center_40%]"
         />
         {/* Gradient overlay with light opacity */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B7CF0]/60 via-[#0B7CF0]/40 to-transparent" />
-        <div ref={heroRef} className="relative mx-auto flex h-full max-w-[1280px] flex-col justify-start px-6 pb-32 pt-[calc(123px+3rem)] lg:px-16 lg:pt-[calc(123px+2.5rem)]">
+        <div className="hero-gradient" />
+        <div ref={heroRef} className="hero-content relative mx-auto flex h-full max-w-[1280px] flex-col justify-start px-6 pb-32 pt-[calc(123px+3rem)] lg:px-16 lg:pt-[calc(123px+2.5rem)]">
           <h2 className={`scroll-animate text-2xl font-light uppercase tracking-[0.18em] text-[#0a2a6b] sm:text-3xl lg:text-[24px] ${heroVisible ? 'is-visible' : ''}`}>
             Professional
           </h2>
@@ -94,7 +156,7 @@ export default function HeroSection() {
             <button
               type="button"
               onClick={() => setQuote(true)}
-              className="inline-flex w-fit items-center gap-3 rounded-full bg-[#0a2a6b] px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition hover:bg-[#0b7cf0]"
+              className="hero-cta-button inline-flex w-fit items-center gap-3 rounded-full px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg"
             >
               Get a Free Quote
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -117,7 +179,7 @@ export default function HeroSection() {
 
       {/* Features card (overlaps the image) */}
       <div ref={featuresRef} className={`scroll-animate-scale relative z-10 mx-auto -mt-[85px] max-w-[1180px] px-4 pb-16 lg:px-0 ${featuresVisible ? 'is-visible' : ''}`}>
-        <div className="grid grid-cols-2 gap-y-8 rounded-[24px] bg-[#f8fbff] px-6 py-7 shadow-[0_20px_60px_rgba(10,42,107,0.12)] lg:grid-cols-4 lg:px-10">
+        <div className="features-card grid grid-cols-2 gap-y-8 px-6 py-7 lg:grid-cols-4 lg:px-10">
           {FEATURES.map((f, i) => (
             <div
               key={f.title}
@@ -135,5 +197,6 @@ export default function HeroSection() {
 
       <QuoteModal open={quote} onClose={() => setQuote(false)} />
     </section>
+    </>
   );
 }
