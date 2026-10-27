@@ -194,7 +194,7 @@ const CSS = `
 }
 .faq-inner{
   position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:0 32px;
-  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:48px; align-items:start;
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; align-items:start;
 }
 
 /* ---------- left ---------- */
@@ -270,5 +270,9 @@ const CSS = `
 }
 @media (prefers-reduced-motion:reduce){
   .faq-item,.faq-num,.faq-chev,.faq-a{transition:none}
+}.faq-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    /* padding: 0px 0px; */
 }
 `;

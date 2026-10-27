@@ -93,11 +93,13 @@ const heroStyles = `
     background: #0b7cf0;
   }
 
-  .features-card {
+.features-card {
     background: #f8fbff;
     border-radius: 24px;
     box-shadow: 0 20px 60px rgba(10, 42, 107, 0.12);
-  }
+    gap: 10px;
+    padding: 10px;
+}
 
   @media (max-width: 1024px) {
     .hero-section {
@@ -110,6 +112,36 @@ const heroStyles = `
       height: 650px;
     }
   }
+    
+@media (max-width: 900px) {
+.features-card.grid.grid-cols-2.gap-y-8.px-6.py-7.lg\:grid-cols-4.lg\:px-10 {
+    border: 1px;
+    gap: 4px;
+    padding: 6px;
+}
+h3.mt-3.text-base.font-bold.text-\[\#0a2a6b\] {
+    font-size: 13px;
+    margin-top: 4px;
+}
+p.mt-1.text-sm.text-\[\#1f2f55\] {
+    font-size: 12px;
+}
+    .features-card.grid.grid-cols-2.gap-y-8.px-6.py-7.lg\:grid-cols-4.lg\:px-10 {
+    padding: 10px;
+}
+    .pb-16 {
+    padding-bottom: calc(var(--spacing) * 6);
+}
+    span.block.text-5xl.text-\[\#0b7cf0\].sm\:text-6xl.lg\:text-\[40px\] {
+    font-size: 36px;
+}
+    span.block.text-5xl.text-\[\#0a2a6b\].sm\:text-6xl.lg\:text-\[40px\] {
+    font-size: 36px;
+}
+    h2.scroll-animate.text-2xl.font-light.uppercase.tracking-\[0\.18em\].text-\[\#0a2a6b\].sm\:text-3xl.lg\:text-\[24px\].is-visible {
+    font-size: 18px;
+}
+}
 `;
 
 export default function HeroSection() {

@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 .lg\:px-12 {
-    padding-inline: calc(var(--spacing) * 24);
+    padding-inline: calc(var(--spacing) * 1);
 }
 .ukbf-card h3 {
     margin: 0 0 14px;
@@ -169,4 +169,15 @@ section.rp-section {
 .tst {
     padding: 20px 0;
 }
+span.faq-blue {
+    font-size: 30px;
 }
+span.faq-navy {
+    font-size: 30px;
+}
+span.faq-navy {
+    font-size: 30px;
+}
+}
+
+
