@@ -33,10 +33,10 @@ export default function QuoteModal({ open, onClose, defaultIssue = ISSUES[0] }: 
     setStatus("sending");
     setError("");
     try {
-      const res = await fetch("/api/quote", {
+      const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, type: "quote" }),
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(json.error || "Something went wrong. Please try again.");

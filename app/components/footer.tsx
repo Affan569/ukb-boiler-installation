@@ -245,9 +245,21 @@ export default function UKBFooter({
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!value.trim()) return;
-    await onSubscribe?.(value.trim());
-    setDone(true);
-    setValue("");
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: value.trim(), type: "newsletter" }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(json.error || "Subscription failed. Please try again.");
+      await onSubscribe?.(value.trim());
+      setDone(true);
+      setValue("");
+    } catch (err) {
+      console.error("Newsletter subscription error:", err);
+      alert("Subscription failed. Please try again.");
+    }
   };
 
   return (

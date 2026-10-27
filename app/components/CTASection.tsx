@@ -54,7 +54,7 @@ const css = `
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  background-color: #f1f5f9; /* Premium soft grey container */
+  background-color: #f1f5f9;
   border-radius: 28px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);

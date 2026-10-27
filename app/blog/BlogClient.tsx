@@ -1052,11 +1052,23 @@ export default function BlogPage() {
   const featuredPost = blogs.find((blog) => blog.featured);
   const popularPosts = blogs.filter((blog) => blog.popular);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (newsletterEmail) {
-      setNewsletterSubscribed(true);
-      setNewsletterEmail("");
+      try {
+        const res = await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: newsletterEmail, type: "newsletter" }),
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(json.error || "Subscription failed. Please try again.");
+        setNewsletterSubscribed(true);
+        setNewsletterEmail("");
+      } catch (err) {
+        console.error("Newsletter subscription error:", err);
+        alert("Subscription failed. Please try again.");
+      }
     }
   };
 
