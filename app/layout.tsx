@@ -16,11 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs",
-    template: "%s | UKB Boiler Installs Southampton",
+    default: "Boiler Installation Southampton | UKB Boiler Installs",
+    template: "%s | UKB Boiler Installs",
   },
-  description: "Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services. Get a free quote today.",
-  keywords: "boiler installation Southampton, boiler repair Southampton, Gas Safe registered engineers, combi boiler installation, emergency boiler repair, central heating Southampton, boiler replacement, boiler service, Worcester boiler, Vaillant boiler, Baxi boiler, heating engineers Southampton, new boiler cost, boiler servicing",
+  description: "Gas Safe registered boiler installation, repair and servicing in Southampton. Combi boiler replacement and central heating with free, no-obligation quotes.",
   authors: [{ name: "UKB Boiler Installs" }],
   creator: "UKB Boiler Installs",
   publisher: "UKB Boiler Installs",
@@ -29,16 +28,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ukbboilerinstallation.co.uk'),
+  metadataBase: new URL('https://ukbboilerinstalls.co.uk'),
   alternates: {
-    canonical: 'https://ukbboilerinstallation.co.uk',
+    canonical: 'https://ukbboilerinstalls.co.uk',
   },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ukbboilerinstallation.co.uk',
-    title: 'Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs',
-    description: 'Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services.',
+    url: 'https://ukbboilerinstalls.co.uk',
+    title: 'Boiler Installation Southampton | UKB Boiler Installs',
+    description: 'Gas Safe registered boiler installation, repair and servicing in Southampton. Combi boiler replacement and central heating with free, no-obligation quotes.',
     siteName: 'UKB Boiler Installs',
     images: [
       {
@@ -51,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boiler Installation Southampton | Gas Safe Registered Engineers | UKB Boiler Installs',
-    description: 'Professional boiler installation, repair and servicing in Southampton. Gas Safe registered engineers offering 24/7 emergency boiler repair, combi boiler replacement and central heating services.',
+    title: 'Boiler Installation Southampton | UKB Boiler Installs',
+    description: 'Gas Safe registered boiler installation, repair and servicing in Southampton. Combi boiler replacement and central heating with free, no-obligation quotes.',
     images: ['/images/hero.png'],
   },
   robots: {

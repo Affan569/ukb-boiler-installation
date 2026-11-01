@@ -8,7 +8,7 @@ import QuoteModal from "./QuoteModal";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Boiler Repair", href: "/boiler-installation" },
+  { label: "Boiler Repair", href: "/boiler-repair" },
     { label: "Blogs", href: "/blog" },
   { label: "Gallery", href: "/gallery" },
   { label: "About Us", href: "/#about" },

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 interface Brand {
@@ -8,19 +9,16 @@ interface Brand {
   logo?: string;
 }
 
-const MAIN_BRANDS: Brand[] = [
-   { name: "Baxi", logo: "/images/baxi.jpg" },
-   { name: "Vaillant", logo: "/images/vallient.webp" },
-  { name: "Ideal", logo: "/images/worcester.webp" },
+const BRANDS: Brand[] = [
+  { name: "Baxi", logo: "/images/baxi.jpg" },
+  { name: "Vaillant", logo: "/images/vaillant.webp" },
+  { name: "Worcester Bosch", logo: "/images/worcester-bosch.webp" },
   { name: "Glow-worm", logo: "/images/glowworm.webp" },
 ];
 
-const GHOST_BRANDS: Brand[] = [
-   { name: "Baxi", logo: "/images/baxi.jpg" },
-   { name: "Vaillant", logo: "/images/vallient.webp" },
-  { name: "Ideal", logo: "/images/worcester.webp" },
-  { name: "Glow-worm", logo: "/images/glowworm.webp" },
-];
+// The marquee renders the same logos in a faded back row, so both lists share one source.
+const MAIN_BRANDS: Brand[] = BRANDS;
+const GHOST_BRANDS: Brand[] = BRANDS;
 
 const DOTS = 5;
 
@@ -114,15 +112,34 @@ function useMarquee(opts: {
 
   return { viewportRef, trackRef, handlers };
 }
-const BrandCard: React.FC<{ brand: Brand; ghost?: boolean }> = ({ brand, ghost }) => (
-  <div className={`tb__card${ghost ? " tb__card--ghost" : ""}`}>
-    {brand.logo ? (
-      <img src={brand.logo} alt={ghost ? "" : brand.name} draggable={false} />
-    ) : (
-      <span className="tb__wordmark">{brand.name}</span>
-    )}
-  </div>
-);
+/* Brands we fit all lead to the boiler installation service page. */
+const BRAND_HREF = "/boiler-installation";
+
+const BrandCard: React.FC<{ brand: Brand; decorative?: boolean }> = ({ brand, decorative }) => {
+  const media = brand.logo ? (
+    <img src={brand.logo} alt={decorative ? "" : brand.name} draggable={false} loading="lazy" />
+  ) : (
+    <span className="tb__wordmark">{brand.name}</span>
+  );
+
+  if (decorative) {
+    return (
+      <div className="tb__card tb__card--ghost" aria-hidden="true">
+        {media}
+      </div>
+    );
+  }
+
+  return (
+    <Link
+      className="tb__card"
+      href={BRAND_HREF}
+      aria-label={`${brand.name} boiler installation in Southampton`}
+    >
+      {media}
+    </Link>
+  );
+};
 
 const sv = {
   viewBox: "0 0 28 28",
@@ -235,7 +252,7 @@ const TrustedBrands: React.FC<TrustedBrandsProps> = ({
                 {[0, 1].map((k) => (
                   <React.Fragment key={k}>
                     {ghostList.map((b, i) => (
-                      <BrandCard key={`${k}-${i}`} brand={b} ghost />
+                      <BrandCard key={`${k}-${i}`} brand={b} decorative />
                     ))}
                   </React.Fragment>
                 ))}
@@ -257,7 +274,7 @@ const TrustedBrands: React.FC<TrustedBrandsProps> = ({
                 {[0, 1].map((k) => (
                   <React.Fragment key={k}>
                     {mainList.map((b, i) => (
-                      <BrandCard key={`${k}-${i}`} brand={b} />
+                      <BrandCard key={`${k}-${i}`} brand={b} decorative={!(k === 0 && i < brands.length)} />
                     ))}
                   </React.Fragment>
                 ))}
@@ -324,7 +341,7 @@ const css = `
 .tb__track{display:flex;width:max-content;will-change:transform}
 
 .tb__card{flex:none;display:grid;place-items:center;width:clamp(60px,8.4vw,94px);aspect-ratio:1/0.82;margin-right:clamp(7px,1vw,11px);
-  background:#fff;border-radius:11px;box-shadow:0 5px 12px rgba(8,40,110,.18);padding:6px}
+  background:#fff;border-radius:11px;box-shadow:0 5px 12px rgba(8,40,110,.18);padding:6px;color:inherit;text-decoration:none}
 .tb__card img{max-width:88%;max-height:70%;object-fit:contain;pointer-events:none}
 .tb__wordmark{font-weight:700;font-size:clamp(9px,1.2vw,13px);letter-spacing:-.01em;color:var(--navy);text-align:center;line-height:1.1}
 .tb__card--ghost{background:#f6f8fc;box-shadow:0 8px 18px rgba(20,50,110,.08)}

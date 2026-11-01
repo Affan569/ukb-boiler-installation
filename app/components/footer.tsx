@@ -340,7 +340,7 @@ export default function UKBFooter({
                 <span className="ico"><Pin /></span>
                 <div>
                   <div className="l">Service Area</div>
-                  <div className="v">London &amp; Surrounding Areas</div>
+                  <div className="v">southampton &amp; Surrounding Areas</div>
                   <div className="s">We cover all major areas in the UK</div>
                 </div>
               </li>

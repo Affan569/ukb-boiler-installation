@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import BoilerServicingContent from "../components/BoilerServicingContent";
 
+const SERVICING_DESCRIPTION = "Annual boiler servicing and maintenance in Southampton by Gas Safe registered engineers. Safety checks and efficiency tuning to keep your boiler reliable.";
+
 export const metadata: Metadata = {
-  title: "Boiler Servicing Southampton | Annual Boiler Maintenance | UKB Boiler Installs",
-  description: "Professional boiler servicing and annual maintenance in Southampton. Gas Safe registered engineers provide thorough boiler checks, safety inspections, and efficiency optimization. Extend your boiler's life with regular servicing.",
-  keywords: "boiler servicing Southampton, annual boiler service, boiler maintenance, boiler safety check, gas boiler service, central heating service, boiler inspection, boiler tune-up, Southampton heating maintenance",
+  title: "Boiler Servicing Southampton",
+  description: SERVICING_DESCRIPTION,
   alternates: {
-    canonical: 'https://ukbboilerinstallation.co.uk/boiler-servicing',
+    canonical: 'https://ukbboilerinstalls.co.uk/boiler-servicing',
   },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ukbboilerinstallation.co.uk/boiler-servicing',
-    title: 'Boiler Servicing Southampton | Annual Boiler Maintenance | UKB Boiler Installs',
-    description: 'Professional boiler servicing and annual maintenance in Southampton. Gas Safe registered engineers provide thorough boiler checks, safety inspections, and efficiency optimization.',
+    url: 'https://ukbboilerinstalls.co.uk/boiler-servicing',
+    title: 'Boiler Servicing Southampton | UKB Boiler Installs',
+    description: SERVICING_DESCRIPTION,
     images: [
       {
         url: '/images/hero.png',
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boiler Servicing Southampton | Annual Boiler Maintenance | UKB Boiler Installs',
-    description: 'Professional boiler servicing and annual maintenance in Southampton. Gas Safe registered engineers provide thorough boiler checks, safety inspections, and efficiency optimization.',
+    title: 'Boiler Servicing Southampton | UKB Boiler Installs',
+    description: SERVICING_DESCRIPTION,
     images: ['/images/hero.png'],
   },
 };

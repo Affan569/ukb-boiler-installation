@@ -1,8 +1,25 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { FILTERS, PROJECTS, type Filter, type Project } from "../Data/Projects";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
+/* Each project links out to the service page that matches its category. */
+const SERVICE_LINKS: Record<Project["category"], { href: string; label: string }> = {
+  "Boiler Installations": {
+    href: "/boiler-installation",
+    label: "Read more about our boiler installation service",
+  },
+  Upgrades: {
+    href: "/boiler-installation",
+    label: "Read more about our boiler installation service",
+  },
+  Repairs: {
+    href: "/boiler-repair",
+    label: "Read more about our boiler repair service",
+  },
+};
 
 /* ---------- Icons ---------- */
 const PinIcon = () => (
@@ -304,10 +321,14 @@ const RecentProjects: React.FC = () => {
               </div>
               <h3 className="rp-card-title">{p.title}</h3>
               <p className="rp-card-desc">{p.description}</p>
-              <button className="rp-more" onClick={() => setSelected(p)}>
-                Read more
+              <Link
+                className="rp-more"
+                href={SERVICE_LINKS[p.category].href}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {SERVICE_LINKS[p.category].label}
                 <Chevron dir="right" />
-              </button>
+              </Link>
             </div>
           </article>
         ))}
@@ -427,6 +448,7 @@ const CSS = `
   display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 0;
   border: none; background: none; cursor: pointer; font-family: inherit;
   font-size: 14px; font-weight: 600; color: var(--blue);
+  text-decoration: none; line-height: 1.4;
 }
 .rp-more svg { width: 16px; height: 16px; transition: transform .15s ease; }
 .rp-more:hover svg { transform: translateX(3px); }

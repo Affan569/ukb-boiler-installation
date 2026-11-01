@@ -7,8 +7,15 @@ export type BlogCategory =
 
 export interface BlogAuthor {
   name: string;
-  avatar: string;
+  avatar?: string;
+  bio?: string;
 }
+
+/** Byline used on every post — the site's own Gas Safe engineers, not invented people. */
+const TEAM: BlogAuthor = {
+  name: "UKB Boiler Installs",
+  bio: "Gas Safe registered heating engineers based in Southampton.",
+};
 
 export interface BlogPost {
   id: number;
@@ -53,8 +60,8 @@ export const blogs: BlogPost[] = [
       "Discover the key factors to consider when selecting a boiler, from efficiency ratings to the right size for your home. Make a confident choice and enjoy reliable heating for years to come.",
     category: "Boiler Installation",
     tag: "HEATING SYSTEMS",
-    image: "/images/11.jpg",
-    author: { name: "Daniel Carter", avatar: "/images/11.jpg" },
+    image: "/images/choosing-the-right-boiler.jpg",
+    author: TEAM,
     date: "2025-04-28",
     readTime: 8,
     featured: true,
@@ -75,7 +82,7 @@ export const blogs: BlogPost[] = [
     category: "Boiler Installation",
     tag: "PROCESS",
     image: "/images/22.png",
-    author: { name: "Daniel Carter", avatar: "/images/11.jpg" },
+    author: TEAM,
     date: "2025-04-18",
     readTime: 6,
     content: [
@@ -94,7 +101,7 @@ export const blogs: BlogPost[] = [
     category: "Maintenance",
     tag: "MAINTENANCE",
     image: "/images/3.jpg",
-    author: { name: "Sarah Mitchell", avatar: "/images/11.jpg" },
+    author: TEAM,
     date: "2025-04-15",
     readTime: 5,
     popular: true,
@@ -114,7 +121,7 @@ export const blogs: BlogPost[] = [
     category: "Energy Saving",
     tag: "ENERGY SAVING",
     image: "/images/4.jpg",
-    author: { name: "James Wilson", avatar: "/images/11.jpg" },
+    author: TEAM,
     date: "2025-04-12",
     readTime: 6,
     popular: true,
@@ -134,7 +141,7 @@ export const blogs: BlogPost[] = [
     category: "Heating Tips",
     tag: "HEATING TIPS",
     image: "/images/5.jpg",
-    author: { name: "Emma Lewis", avatar: "/images/11.jpg" },
+    author: TEAM,
     date: "2025-04-10",
     readTime: 4,
     content: [

@@ -215,7 +215,7 @@ export default function BoilerRepairContent() {
               <span className="text-[#FF7A1A]">We&apos;ll Fix It Fast</span>
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mb-8">
-              Emergency boiler repair in Southampton. Gas Safe engineers available 24/7 to get your heating back on quickly and safely.
+              Emergency boiler repair in Southampton. Gas Safe engineers ready to get your heating back on quickly and safely, Mon–Sat 8am–6pm.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -226,7 +226,7 @@ export default function BoilerRepairContent() {
                 <Icon d={ICONS.arrow} size={20} />
               </button>
               <a
-                href="tel:+4454326546"
+                href="tel:07988530358"
                 className="inline-flex items-center justify-center gap-3 bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors"
               >
                 <Icon d={ICONS.phone} size={20} />
@@ -453,10 +453,10 @@ export default function BoilerRepairContent() {
           <div className="br-cta">
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-black mb-4">Boiler Emergency?</h2>
-              <p className="text-xl text-white/90 mb-8">Don&apos;t suffer in the cold. Call our 24/7 emergency line now.</p>
+              <p className="text-xl text-white/90 mb-8">Don&apos;t suffer in the cold. Call our emergency line now.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+4454326546"
+                  href="tel:07988530358"
                   className="inline-flex items-center justify-center gap-3 bg-white text-[#0b7cf0] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors"
                 >
                   <Icon d={ICONS.phone} size={20} />

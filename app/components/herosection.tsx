@@ -16,14 +16,14 @@ const FEATURES = [
     ),
   },
   {
-    title: "24/7 Support",
-    text: "Here when you need us",
+    title: "Mon–Sat Support",
+    text: "8am–6pm, six days a week",
     icon: (
       <svg viewBox="0 0 64 64" className="h-11 w-11" fill="none" stroke="#0a2a6b" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M54 32a22 22 0 1 1-8-17" />
         <path d="M46 6v10H36" stroke="#0b7cf0" />
         <path d="M32 16v16l-9 8" />
-        <text x="34" y="52" fontSize="14" fontWeight="700" fill="#0b7cf0" stroke="none">24/7</text>
+        <path d="M40 44h16M48 36v16" stroke="#0b7cf0" />
       </svg>
     ),
   },
@@ -165,9 +165,16 @@ export default function HeroSection() {
             Professional
           </h2>
           <h1 className={`scroll-animate-delay-1 mt-1 font-black uppercase leading-[0.95] tracking-tight ${heroVisible ? 'is-visible' : ''}`}>
+<<<<<<< HEAD
   <span className="block text-[34px] text-[#ffffff] lg:text-[44px]">Boiler</span>
   <span className="block text-[34px] text-[#FF7A1A] lg:text-[44px]">Installation</span>
 </h1>
+=======
+            <span className="block text-[34px] text-[#ffffff] lg:text-[44px]">Boiler Installation</span>
+            <span className="block text-[34px] text-[#FF7A1A] lg:text-[44px]">in Southampton</span>
+            <span className="mt-2 block text-[18px] font-bold tracking-[0.18em] text-[#ffffff] lg:text-[22px]">Gas Safe Engineers</span>
+          </h1>
+>>>>>>> 6fcd914 (SEO fixes: sitemap, robots, image renames)
 
           <p className={`scroll-animate-delay-2 mt-2 text-lg font-medium text-[#ffffff] sm:text-[22px] ${heroVisible ? 'is-visible' : ''}`}>
             Safe. Efficient. Reliable.
@@ -190,7 +197,7 @@ export default function HeroSection() {
               </svg>
             </button>
 
-            <a href="tel:+44312092405" className="flex items-center gap-3">
+            <a href="tel:07988530358" className="flex items-center gap-3">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="#09296A">
                 <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2Z" />
               </svg>

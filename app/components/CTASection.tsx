@@ -25,11 +25,11 @@ export default function CTASection() {
             >
               Get a Free Quote
             </QuoteButton>
-            <a href="tel:+923142078089" className="cta-phone">
+            <a href="tel:07988530358" className="cta-phone">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2Z" />
               </svg>
-              <span className="cta-phone-number">+44 9219379218</span>
+              <span className="cta-phone-number">07988530358</span>
             </a>
           </div>
         </div>

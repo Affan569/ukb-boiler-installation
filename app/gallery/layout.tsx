@@ -1,21 +1,36 @@
 import type { Metadata } from "next";
-import GalleryClient from "./GalleryClient";
+
+const GALLERY_DESCRIPTION = "Recent boiler installation and heating projects in Southampton. Before and after photos of combi boiler replacements completed by our Gas Safe engineers.";
 
 export const metadata: Metadata = {
-  title: "Boiler Installation Gallery | Our Recent Projects | UKB Boiler Installs Southampton",
-  description: "View our boiler installation gallery showcasing recent projects in Southampton. See our quality workmanship on combi boilers, system boilers, and heating installations with before & after photos.",
-  keywords: "boiler installation gallery, boiler projects Southampton, heating installation photos, combi boiler installation examples, boiler repair before after, heating system gallery, boiler replacement projects",
+  title: "Our Work Gallery",
+  description: GALLERY_DESCRIPTION,
   alternates: {
-    canonical: 'https://ukbboilerinstallation.co.uk/gallery',
+    canonical: 'https://ukbboilerinstalls.co.uk/gallery',
   },
   openGraph: {
     type: 'website',
-    url: 'https://ukbboilerinstallation.co.uk/gallery',
-    title: 'Boiler Installation Gallery | Our Recent Projects | UKB Boiler Installs Southampton',
-    description: 'View our boiler installation gallery showcasing recent projects in Southampton. See our quality workmanship on combi boilers, system boilers, and heating installations with before & after photos.',
+    locale: 'en_GB',
+    url: 'https://ukbboilerinstalls.co.uk/gallery',
+    title: 'Our Work Gallery | UKB Boiler Installs',
+    description: GALLERY_DESCRIPTION,
+    images: [
+      {
+        url: '/images/hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'Boiler installation projects gallery',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Work Gallery | UKB Boiler Installs',
+    description: GALLERY_DESCRIPTION,
+    images: ['/images/hero.png'],
   },
 };
 
-export default function GalleryLayout() {
-  return <GalleryClient />;
+export default function GalleryLayout({ children }: LayoutProps<"/gallery">) {
+  return children;
 }

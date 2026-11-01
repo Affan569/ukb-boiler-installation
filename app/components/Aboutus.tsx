@@ -4,7 +4,7 @@ import QuoteModal from "./QuoteModal";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 /* Apni image ka path yahan set karo (public/images ke andar) */
-const ABOUT_IMAGE = "/images/9.jpg";
+const ABOUT_IMAGE = "/images/installation-van.jpg";
 
 const PILLARS = [
   {

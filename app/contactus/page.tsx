@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
 
+const CONTACT_DESCRIPTION = "Contact UKB Boiler Installs in Southampton for boiler installation, repair and servicing quotes. Get a free quote from our Gas Safe registered engineers.";
+
 export const metadata: Metadata = {
-  title: "Contact Us | Boiler Installation Southampton | Get a Free Quote | UKB Boiler Installs",
-  description: "Contact UKB Boiler Installs in Southampton for professional boiler installation and repair services. Get a free quote from our Gas Safe registered engineers. 24/7 emergency support available.",
-  keywords: "contact boiler installation Southampton, boiler quote Southampton, heating engineer contact, emergency boiler repair contact, free boiler quote, boiler installation inquiry, Southampton heating services contact",
+  title: "Contact Us",
+  description: CONTACT_DESCRIPTION,
   alternates: {
-    canonical: 'https://ukbboilerinstallation.co.uk/contactus',
+    canonical: 'https://ukbboilerinstalls.co.uk/contactus',
   },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ukbboilerinstallation.co.uk/contactus',
-    title: 'Contact Us | Boiler Installation Southampton | Get a Free Quote | UKB Boiler Installs',
-    description: 'Contact UKB Boiler Installs in Southampton for professional boiler installation and repair services. Get a free quote from our Gas Safe registered engineers. 24/7 emergency support available.',
+    url: 'https://ukbboilerinstalls.co.uk/contactus',
+    title: 'Contact Us | UKB Boiler Installs',
+    description: CONTACT_DESCRIPTION,
     images: [
       {
         url: '/images/hero.png',
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us | Boiler Installation Southampton | Get a Free Quote | UKB Boiler Installs',
-    description: 'Contact UKB Boiler Installs in Southampton for professional boiler installation and repair services. Get a free quote from our Gas Safe registered engineers. 24/7 emergency support available.',
+    title: 'Contact Us | UKB Boiler Installs',
+    description: CONTACT_DESCRIPTION,
     images: ['/images/hero.png'],
   },
 };

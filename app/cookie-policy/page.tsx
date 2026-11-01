@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Cookie Policy | UKB Boiler Installs Southampton",
   description: "Learn about how UKB Boiler Installs uses cookies on our website and your choices regarding them. Understand our cookie policy for boiler installation services in Southampton.",
   alternates: {
-    canonical: 'https://ukbboilerinstallation.co.uk/cookie-policy',
+    canonical: 'https://ukbboilerinstalls.co.uk/cookie-policy',
   },
 };
 

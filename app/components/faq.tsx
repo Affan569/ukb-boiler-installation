@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
+import Link from "next/link";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 /* =====================================================================
@@ -22,18 +23,31 @@ export const FAQ_SECTION = {
   ],
 };
 
-export type Faq = { question: string; answer: string };
+export type Faq = { question: string; answer: ReactNode };
 
 export const FAQS: Faq[] = [
   {
     question: "How long does a boiler installation take?",
-    answer:
-      "Most boiler replacements are completed in a single day. Larger jobs, such as moving the boiler or changing the pipework, can take a little longer. We confirm the timescale in your quote.",
+    answer: (
+      <>
+        Most boiler replacements are completed in a single day. Larger jobs, such as moving the
+        boiler or changing the pipework, can take a little longer. We confirm the timescale in your
+        quote. See our{" "}
+        <Link href="/boiler-installation">boiler installation service in Southampton</Link> for the
+        full process.
+      </>
+    ),
   },
   {
     question: "Do you offer free quotes?",
-    answer:
-      "Yes, we provide free, no-obligation quotes for all boiler installations. Our team will assess your needs, recommend the best options and give you a clear, upfront price with no hidden costs.",
+    answer: (
+      <>
+        Yes, we provide free, no-obligation quotes for all boiler installations. Our team will
+        assess your needs, recommend the best options and give you a clear, upfront price with no
+        hidden costs. <Link href="/contactus">Request a free, no-obligation quote</Link> to get
+        started.
+      </>
+    ),
   },
   {
     question: "Are your engineers Gas Safe registered?",
@@ -42,8 +56,14 @@ export const FAQS: Faq[] = [
   },
   {
     question: "What brands of boilers do you install?",
-    answer:
-      "We install boilers from leading manufacturers and will recommend the right model for your home, heating needs and budget. Ask us which brands we can supply when you request your quote.",
+    answer: (
+      <>
+        We install boilers from leading manufacturers and will recommend the right model for your
+        home, heating needs and budget. See the{" "}
+        <Link href="/boiler-installation">boiler installation service</Link> for the brands we fit,
+        or ask us which brands we can supply when you request your quote.
+      </>
+    ),
   },
   {
     question: "Do you provide warranty?",
@@ -52,8 +72,13 @@ export const FAQS: Faq[] = [
   },
   {
     question: "Can you help with finance options?",
-    answer:
-      "Yes. We can talk you through ways to spread the cost of your new boiler into monthly payments. Request a quote and we’ll explain the options available to you.",
+    answer: (
+      <>
+        Yes. We can talk you through ways to spread the cost of your new boiler into monthly
+        payments. <Link href="/contactus">Get in touch</Link> and we’ll explain the options
+        available to you.
+      </>
+    ),
   },
 ];
 
@@ -247,6 +272,8 @@ const CSS = `
 .faq-item[data-open="true"] .faq-a{grid-template-rows:1fr; visibility:visible}
 .faq-a > div{overflow:hidden}
 .faq-a p{margin:0; padding:0 40px 24px 84px; max-width:640px; color:#4f5d79; font-size:15px; line-height:1.85}
+.faq-a a{color:#1479ff; font-weight:600; text-decoration:underline; text-underline-offset:2px}
+.faq-a a:hover{color:#0b2a5b}
 
 /* ---------- responsive: same design, stacked ---------- */
 @media (max-width:900px){

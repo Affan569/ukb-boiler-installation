@@ -19,8 +19,8 @@ const ITEMS: Item[] = [
     ),
   },
   {
-    title: "24/7 Support",
-    text: "We’re always here when you need us — day or night, for peace of mind.",
+    title: "Mon–Sat Support",
+    text: "Open 8am–6pm, Monday to Saturday — here when you need us.",
     bg: "from-[#eaf3ff] to-[#f1f5fb]",
     icon: (
       <svg viewBox="0 0 48 48" className={ICON} fill="none" stroke="#0a2a6b" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -28,7 +28,7 @@ const ITEMS: Item[] = [
         <rect x="5" y="26" width="6" height="10" rx="2" />
         <rect x="37" y="26" width="6" height="10" rx="2" />
         <path d="M40 36c0 4-4 6-9 6h-3" />
-        <text x="24" y="29" fontSize="11" fontWeight="800" fill="#0b7cf0" stroke="none" textAnchor="middle">24/7</text>
+        <path d="M24 20v6l4 3" stroke="#0b7cf0" />
       </svg>
     ),
   },
@@ -79,12 +79,13 @@ export default function WhyChooseUs() {
 
   return (
     <>
-      <style>{`@media (min-width: 1024px) { .why-choose-us-section { padding-top: 30px !important; padding-bottom: 30px !important; } } @media (max-width: 768px) { .why-choose-us-heading { font-size: 30px !important; } }`}</style>
+      <style>{`@media (min-width: 1024px) { .why-choose-us-section { padding-top: 50px !important; padding-bottom: 30px !important; } } @media (max-width: 768px) { .why-choose-us-heading { font-size: 30px !important; } }`}</style>
       <section ref={sectionRef} className="relative overflow-hidden bg-white why-choose-us-section" style={{paddingTop: '64px', paddingBottom: '30px'}}>
-      {/* Right: boiler image in a rounded circle with an orange arc */}
-      <div className="pointer-events-none absolute -top-16 right-[-60px] hidden h-[500px] w-[500px] lg:block xl:right-[2%] xl:h-[540px] xl:w-[540px]">
+      
+      {/* Right: boiler image in a smaller rounded circle with top padding space */}
+      <div className="pointer-events-none absolute top-6 right-[-10px] hidden h-[340px] w-[340px] lg:block xl:right-[6%] xl:h-[360px] xl:w-[360px]">
         {/* soft glow behind the circle */}
-        <div className="absolute inset-4 rounded-full bg-[#dbe8fb]/60 blur-2xl" />
+        <div className="absolute inset-4 rounded-full bg-[#dbe8fb]/60 blur-xl" />
 
         {/* orange arc around the circle */}
         <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full -rotate-[35deg]" fill="none">
@@ -93,26 +94,25 @@ export default function WhyChooseUs() {
             cy="50"
             r="49"
             stroke="#f28a1c"
-            strokeWidth="0.6"
+            strokeWidth="0.8"
             strokeLinecap="round"
             strokeDasharray="70 238"
           />
         </svg>
 
         {/* the image, perfectly round */}
-        <div className="absolute inset-[18px] overflow-hidden rounded-full bg-[#eef2f8] shadow-[0_20px_60px_rgba(10,42,107,0.18)] ring-[6px] ring-white">
-          {/* Put your image at /public/images/boiler.jpg */}
+        <div className="absolute inset-[14px] overflow-hidden rounded-full bg-[#eef2f8] shadow-[0_16px_40px_rgba(10,42,107,0.15)] ring-[5px] ring-white">
           <Image
             src="/images/boiler.jpg"
             alt="Worcester boiler installation"
             fill
             priority
             quality={90}
-            sizes="540px"
+            sizes="360px"
             className="object-cover object-[55%_55%] scale-[1.03]"
           />
           {/* subtle inner edge so it blends nicely */}
-          <div className="absolute inset-0 rounded-full shadow-[inset_0_0_40px_rgba(10,42,107,0.12)]" />
+          <div className="absolute inset-0 rounded-full shadow-[inset_0_0_30px_rgba(10,42,107,0.12)]" />
         </div>
       </div>
 
@@ -131,7 +131,7 @@ export default function WhyChooseUs() {
 
           <p className="mt-5 max-w-[470px] text-sm leading-6 text-[#3a4b73] sm:text-base sm:leading-7">
             We’re more than just boiler installers — we’re your trusted local experts. Here’s why
-            thousands of homeowners choose us.
+            hundreds of homeowners choose us.
           </p>
         </div>
 
@@ -156,8 +156,6 @@ export default function WhyChooseUs() {
           ))}
         </div>
       </div>
-
-     
     </section>
     </>
   );

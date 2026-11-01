@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import BoilerRepairContent from "../components/BoilerRepairContent";
 
+const REPAIR_DESCRIPTION = "Emergency boiler repair in Southampton from Gas Safe registered engineers. Fast diagnosis and reliable fixes for breakdowns, leaks and heating problems.";
+
 export const metadata: Metadata = {
-  title: "Boiler Repair Southampton | Emergency Boiler Fix | UKB Boiler Installs",
-  description: "Emergency boiler repair services in Southampton. 24/7 rapid response for boiler breakdowns, leaks, and heating problems. Gas Safe registered engineers with fast diagnosis and reliable repairs.",
-  keywords: "boiler repair Southampton, emergency boiler repair, boiler breakdown, boiler leak repair, no heating, no hot water, boiler fix, heating engineer repair, 24/7 boiler service",
+  title: "Boiler Repair Southampton",
+  description: REPAIR_DESCRIPTION,
   alternates: {
-    canonical: 'https://ukbboilerinstallation.co.uk/boiler-repair',
+    canonical: 'https://ukbboilerinstalls.co.uk/boiler-repair',
   },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://ukbboilerinstallation.co.uk/boiler-repair',
-    title: 'Boiler Repair Southampton | Emergency Boiler Fix | UKB Boiler Installs',
-    description: 'Emergency boiler repair services in Southampton. 24/7 rapid response for boiler breakdowns, leaks, and heating problems. Gas Safe registered engineers with fast diagnosis and reliable repairs.',
+    url: 'https://ukbboilerinstalls.co.uk/boiler-repair',
+    title: 'Boiler Repair Southampton | UKB Boiler Installs',
+    description: REPAIR_DESCRIPTION,
     images: [
       {
         url: '/images/hero.png',
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boiler Repair Southampton | Emergency Boiler Fix | UKB Boiler Installs',
-    description: 'Emergency boiler repair services in Southampton. 24/7 rapid response for boiler breakdowns, leaks, and heating problems. Gas Safe registered engineers with fast diagnosis and reliable repairs.',
+    title: 'Boiler Repair Southampton | UKB Boiler Installs',
+    description: REPAIR_DESCRIPTION,
     images: ['/images/hero.png'],
   },
 };

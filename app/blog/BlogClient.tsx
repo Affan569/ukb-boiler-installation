@@ -1151,7 +1151,7 @@ export default function BlogPage() {
             </ul>
           </div>
           <div className="bp-hero-visual">
-            <img src="/images/boiler-hero.png" alt="Boiler installation" className="bp-hero-thermo" />
+            <img src="/images/hero.png" alt="Gas Safe boiler installation in Southampton" className="bp-hero-thermo" />
             <div className="bp-img-fallback" />
             <div className="bp-script">Warm homes, happy customers</div>
           </div>
@@ -1218,13 +1218,15 @@ export default function BlogPage() {
                   </div>
                   <div className="bp-card-foot">
                     <div className="bp-card-author">
-                      <img
-                        src={blog.author.avatar}
-                        alt={blog.author.name}
-                        className="bp-avatar"
-                        width="32"
-                        height="32"
-                      />
+                      {blog.author.avatar && (
+                        <img
+                          src={blog.author.avatar}
+                          alt={blog.author.name}
+                          className="bp-avatar"
+                          width="32"
+                          height="32"
+                        />
+                      )}
                       <div>
                         <strong>{blog.author.name}</strong>
                         <small>{formatDate(blog.date)}</small>
@@ -1326,8 +1328,8 @@ export default function BlogPage() {
                     <path d="M12 2v20M2 12h20" />
                   </svg>
                 </span>
-                <strong>24/7</strong>
-                <small>Support</small>
+                <strong>Mon–Sat</strong>
+                <small>8am–6pm</small>
               </li>
               <li>
                 <span>
@@ -1388,13 +1390,15 @@ export default function BlogPage() {
               <p className="bp-modal-excerpt">{selectedPost.excerpt}</p>
               <div className="bp-modal-meta">
                 <div className="bp-card-author">
-                  <img
-                    src={selectedPost.author.avatar}
-                    alt={selectedPost.author.name}
-                    className="bp-avatar"
-                    width="40"
-                    height="40"
-                  />
+                  {selectedPost.author.avatar && (
+                    <img
+                      src={selectedPost.author.avatar}
+                      alt={selectedPost.author.name}
+                      className="bp-avatar"
+                      width="40"
+                      height="40"
+                    />
+                  )}
                   <div>
                     <strong>{selectedPost.author.name}</strong>
                     <small>{formatDate(selectedPost.date)}</small>
@@ -1405,6 +1409,9 @@ export default function BlogPage() {
                 <span className="bp-sep">•</span>
                 <span>{selectedPost.category}</span>
               </div>
+              {selectedPost.author.bio && (
+                <p style={{ fontSize: "12.5px", color: "var(--muted)", marginTop: 0 }}>{selectedPost.author.bio}</p>
+              )}
               {selectedPost.content.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
               ))}
