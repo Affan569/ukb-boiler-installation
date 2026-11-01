@@ -165,16 +165,10 @@ export default function HeroSection() {
             Professional
           </h2>
           <h1 className={`scroll-animate-delay-1 mt-1 font-black uppercase leading-[0.95] tracking-tight ${heroVisible ? 'is-visible' : ''}`}>
-<<<<<<< HEAD
-  <span className="block text-[34px] text-[#ffffff] lg:text-[44px]">Boiler</span>
-  <span className="block text-[34px] text-[#FF7A1A] lg:text-[44px]">Installation</span>
-</h1>
-=======
             <span className="block text-[34px] text-[#ffffff] lg:text-[44px]">Boiler Installation</span>
             <span className="block text-[34px] text-[#FF7A1A] lg:text-[44px]">in Southampton</span>
             <span className="mt-2 block text-[18px] font-bold tracking-[0.18em] text-[#ffffff] lg:text-[22px]">Gas Safe Engineers</span>
           </h1>
->>>>>>> 6fcd914 (SEO fixes: sitemap, robots, image renames)
 
           <p className={`scroll-animate-delay-2 mt-2 text-lg font-medium text-[#ffffff] sm:text-[22px] ${heroVisible ? 'is-visible' : ''}`}>
             Safe. Efficient. Reliable.
